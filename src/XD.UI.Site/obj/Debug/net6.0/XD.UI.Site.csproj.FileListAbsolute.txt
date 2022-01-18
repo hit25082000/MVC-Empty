@@ -24,3 +24,4 @@ C:\Users\domin\source\repos\Dot6\Empty\AppModelo\src\XD.UI.Site\obj\Debug\net6.0
 C:\Users\domin\source\repos\Dot6\Empty\AppModelo\src\XD.UI.Site\obj\Debug\net6.0\ref\XD.UI.Site.dll
 C:\Users\domin\source\repos\Dot6\Empty\AppModelo\src\XD.UI.Site\obj\Debug\net6.0\XD.UI.Site.pdb
 C:\Users\domin\source\repos\Dot6\Empty\AppModelo\src\XD.UI.Site\obj\Debug\net6.0\XD.UI.Site.genruntimeconfig.cache
+C:\Users\domin\source\repos\Dot6\Empty\AppModelo\src\XD.UI.Site\bin\Debug\net6.0\bundleconfig.json
