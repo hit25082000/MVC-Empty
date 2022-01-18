@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Razor;
+using XD.UI.Site.Data;
 
 namespace XD.UI.Site
 {
@@ -21,9 +22,11 @@ namespace XD.UI.Site
                 options.AreaViewLocationFormats.Add("/Modulos/{2}/Views/Shared/{0}.cshtml"); 
                 options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
 
-            });
+            });          
             
             services.AddControllersWithViews();
+
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment environment)
