@@ -1,4 +1,6 @@
-﻿namespace XD.UI.Site
+﻿using Microsoft.AspNetCore.Mvc.Razor;
+
+namespace XD.UI.Site
 {
     public class Startup
     {
@@ -12,6 +14,15 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.AreaViewLocationFormats.Clear(); 
+                options.AreaViewLocationFormats.Add("/Modulos/{2}/Views/{1}/{0}.cshtml"); 
+                options.AreaViewLocationFormats.Add("/Modulos/{2}/Views/Shared/{0}.cshtml"); 
+                options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
+
+            });
+            
             services.AddControllersWithViews();
         }
 
@@ -31,13 +42,14 @@
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "area",
-                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+            app.MapAreaControllerRoute("AreaProdutos", "Produtos", "Produtos/{controller=Cadastro}/{action=Index}/{id?}");
+
+            app.MapAreaControllerRoute("AreaVendas", "Vendas", "Vendas/{controller=Pedidos}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+             
         }
     }
 }
