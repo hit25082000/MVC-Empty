@@ -5,7 +5,17 @@
       "ProjectGuid": "5b053340-db6e-4252-a814-d2a4c6bc4c08",
       "DisplayName": "XD.UI.Site",
       "ColorIndex": 0
+    },
+    "f097a892-dacc-4530-82d2-3f3b5d09acd9": {
+      "ProjectGuid": "f097a892-dacc-4530-82d2-3f3b5d09acd9",
+      "DisplayName": "XD.UI.Site",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
