@@ -4,10 +4,10 @@ using XD.UI.Site.Models;
 
 namespace XD.UI.Site.Controllers
 {
-	public class TestCrudController : Controller
+	public class TesteCrudController : Controller
 	{
 		private readonly MeuDbContext _contexto;
-		public TestCrudController(MeuDbContext contexto)
+		public TesteCrudController(MeuDbContext contexto)
 		{
 			_contexto = contexto;
 		}
@@ -36,7 +36,7 @@ namespace XD.UI.Site.Controllers
 			_contexto.Alunos.Remove(aluno);
 			_contexto.SaveChanges();
 
-			return View();
+			return View("_ValidationScriptsPartial");
 		}
 	}
 }
