@@ -1,6 +1,7 @@
-﻿@inject IPedidoRepository PedidoRepository
+﻿@using XD.UI.Site.Data
+@inject IPedidoRepository PedidoRepository
 
-@PedidoRepository.ObterPedido().id;
+@PedidoRepository.ObterPedido().Id
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.EntityFrameworkCore;
 using XD.UI.Site.Data;
 
 namespace XD.UI.Site
@@ -22,8 +23,11 @@ namespace XD.UI.Site
                 options.AreaViewLocationFormats.Add("/Modulos/{2}/Views/Shared/{0}.cshtml"); 
                 options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
 
-            });          
-            
+            });
+
+            services.AddDbContext<MeuDbContext>(optionsAction: options =>
+                options.UseSqlServer(Configuration.GetConnectionString("MeuDbContext")));
+
             services.AddControllersWithViews();
 
             services.AddTransient<IPedidoRepository, PedidoRepository>();
